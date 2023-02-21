@@ -27,6 +27,14 @@ Route::get('/artikel/{id}', function($id){
     return view('articles', ['id' => $id]);
 });
 
+//Pratikum 2 Controller Web 
+Route::get('/', [PageController::class,'index']);
+
+Route::get('/about', [PageController::class,'about']);
+
+Route::get('/articles/{id}', [PageController::class,'articles']);
+
+//Pratikum 3 Desain Routing Web
 
 
 
