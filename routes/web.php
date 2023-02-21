@@ -1,7 +1,10 @@
 <?php
+// use App\Http\Controllers\PageController;
 
-use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\AboutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +23,7 @@ Route::get('/', function () {
 
 ///Pratikum 1 Routing Web Framework Laravel
 Route::get('/articles/{id}', function($id){
-    return 'Halaman artikel dengan id '. $id . ' king ';
+    return 'Halaman artikel dengan id '. $id;
 });
 
 Route::get('/artikel/{id}', function($id){
@@ -28,13 +31,14 @@ Route::get('/artikel/{id}', function($id){
 });
 
 //Pratikum 2 Controller Web 
-Route::get('/', [PageController::class,'index']);
+Route::get('/', [HomeController::class,'index']);
 
-Route::get('/about', [PageController::class,'about']);
+Route::get('/about', [AboutController::class,'about']);
 
-Route::get('/articles/{id}', [PageController::class,'articles']);
+Route::get('/articles/{id}', [ArticleController::class,'articles']);
 
 //Pratikum 3 Desain Routing Web
+
 
 
 
